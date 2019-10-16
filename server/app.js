@@ -2,7 +2,7 @@
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
-
+const mongoose = require('mongoose');
 const app = express();
 
 /** EJS */
@@ -22,11 +22,38 @@ app.use((req, res, next) => {
 
 /** ROUTES REQUIRE*/
 const basecampRoutes = require('./routes/basecamp');
+const authRoutes = require('./routes/auth');
 const errorRoutes = require('./routes/errors');
 
 /** RUTES MIDDLEWARES */
+// app.use(express.json());
 app.use(basecampRoutes);
+app.use(authRoutes);
 app.use(errorRoutes);
 
+app.use((error, req, res, next) => {
 
-app.listen(8080);
+  const status = error.statusCode || 500;
+  const message = error.message;
+  const data = error.data;
+  res.status(status).json({
+      message: message,
+      data: data
+  })
+
+
+})
+
+
+
+const MONGODB_URI =
+  'mongodb+srv://miroki:01Buohuca@clusternode2019-6odjv.mongodb.net/basecamp';
+
+
+mongoose.connect(MONGODB_URI)
+.then(() => {
+
+    app.listen(8080);
+
+})
+.catch(err => console.log(err));
