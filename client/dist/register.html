@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TaskBoard</title>
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="main-header__container">
+            <div class="logo-container">
+                <a class="logo-image">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="project-diagram" class="svg-inline--fa fa-project-diagram fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M384 320H256c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32zM192 32c0-17.67-14.33-32-32-32H32C14.33 0 0 14.33 0 32v128c0 17.67 14.33 32 32 32h95.72l73.16 128.04C211.98 300.98 232.4 288 256 288h.28L192 175.51V128h224V64H192V32zM608 0H480c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V32c0-17.67-14.33-32-32-32z"></path></svg>
+                    <span class="logo-title">
+                        TaskBoard
+                    </span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="main-nav__items">
+                    <li class="main-nav__item"><a href="/login.html">Prijava</a></li>
+                    <li class="main-nav__item"><a href="/register.html">Registracija</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<main>
+    <div class="container" id="sign-up">
+    <div class="sign-up__background">
+    </div>
+    <form class="sign-up-form">
+        <label for="username">Korisničko ime</label>
+        <input type="text" name="username" id="username" placeholder="Korisničko ime">
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Email">
+        
+        <label for="password">Lozinka</label>
+        <input type="password" name="password" id="password" placeholder="Lozinka">
+        
+        <label for="confirmPassword">Potvrda lozinke</label>
+        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Potvrda lozinke">
+        
+        <button type="submit" class="form-btn">Registriraj se</button>
+    </form>
+    </div>
+</main>
+<footer>
+    <nav class="footer-nav">
+        <ul class="footer-nav__items">
+            <li class="footer-nav__item"><a href="#">Kontakt</a></li>
+            <li class="footer-nav__item"><a href="#">Uvjeti privatnosti</a></li>
+            <li class="footer-nav__item"><a href="#">O aplikaciji</a></li>
+        </ul>
+    </nav>
+</footer>
+<script type="text/javascript" src="js/bundle.js"></script></body>
+</html>

@@ -15,7 +15,18 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/index.html'
+        }),
+        new HtmlWebpackPlugin({
+          filename: 'register.html',
+          template: './src/register.html',
+          'base': 'http://localhost:3000/register.html'
+        }),
+        new HtmlWebpackPlugin({
+          filename: 'login.html',
+          template: './src/login.html',
+          'base': 'http://localhost:3000/login.html'
         })
+
     ],
     module: {
         rules: [
