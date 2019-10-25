@@ -47,7 +47,7 @@ app.use((error, req, res, next) => {
 
 
 const MONGODB_URI =
-  'mongodb+srv://miroki:01Buohuca@clusternode2019-6odjv.mongodb.net/basecamp';
+  'MONGO_URL';
 
 
 mongoose.connect(MONGODB_URI)
